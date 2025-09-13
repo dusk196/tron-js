@@ -1,4 +1,4 @@
-import { Game } from "./Game";
+import { Game } from "./core/Game";
 
 window.onload = () => {
     const canvas = document.createElement("canvas");

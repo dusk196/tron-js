@@ -13,7 +13,10 @@
   },
   "homepage": "https://github.com/dusk196/tron-js#readme",
   "type": "module",
-  "dependencies": {},
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.13",
+    "tailwindcss": "^4.1.13"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

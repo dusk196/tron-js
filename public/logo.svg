@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-hidden="true">
+  <!-- Dark background -->
+  <rect width="100%" height="100%" fill="#121417"/>
+
+  <!-- Glow filter -->
+  <defs>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- base bike group uses currentColor for easy color override -->
+    <g id="bike-shapes">
+      <!-- Speed streaks (to the outside of each bike) -->
+      <path d="M120 520 L220 520 M100 500 L220 500 M80 540 L220 540" stroke="currentColor" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.9"/>
+      <!-- rear wheel (stylized ring) -->
+      <path d="M270 560 A40 40 0 1 0 269.9 560" stroke="currentColor" stroke-width="14" stroke-linecap="round" fill="none"/>
+      <!-- front wheel (stylized ring) -->
+      <path d="M460 560 A40 40 0 1 0 459.9 560" stroke="currentColor" stroke-width="14" stroke-linecap="round" fill="none"/>
+      <!-- body / frame -->
+      <path d="M240 520 L320 480 L380 460 L420 460 L460 520" stroke="currentColor" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <!-- cockpit / fairing -->
+      <path d="M350 420 L390 400 L430 400 L450 420" stroke="currentColor" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <!-- lower trail (light trail under bike) -->
+      <path d="M280 590 L480 590" stroke="currentColor" stroke-width="10" stroke-linecap="round" fill="none" opacity="0.95"/>
+    </g>
+  </defs>
+
+  <!-- Orange bike (left, facing right). Use color via currentColor -->
+  <g id="orangeBike" transform="translate(0,0)" style="color:#FF8C2A" filter="url(#glow)">
+    <use href="#bike-shapes"/>
+  </g>
+
+  <!-- Blue bike: exact mirror of orange across the vertical center.
+       We mirror the entire canvas horizontally by translating by the svg width then scale(-1,1).
+       The mirrored use re-uses the same shapes so it is an exact replica. -->
+  <g style="color:#00D1FF" filter="url(#glow)" transform="translate(1024,0) scale(-1,1)">
+    <use href="#bike-shapes"/>
+  </g>
+
+  <!-- Fine tuning: move the two bikes slightly apart so they face each other with a gap -->
+  <!-- (Positioning achieved by original path coordinates leaving left and right space) -->
+
+  <!-- Optional: subtle center divider light (very faint) to emphasize the meeting point -->
+  <line x1="512" y1="440" x2="512" y2="600" stroke="#ffffff" stroke-opacity="0.03" stroke-width="2" />
+
+</svg>

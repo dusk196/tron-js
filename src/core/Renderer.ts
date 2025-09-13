@@ -35,7 +35,7 @@ export class Renderer {
     }
 
     drawBlock(block: Block) {
-        this.ctx.fillStyle = "green";
+        this.ctx.fillStyle = "limegreen";
         this.ctx.fillRect(block.x * this.size, block.y * this.size, this.size, this.size);
     }
 }
