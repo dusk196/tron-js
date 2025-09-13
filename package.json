@@ -1,0 +1,26 @@
+{
+  "name": "tron-js",
+  "version": "0.1.0",
+  "description": "You should know what it is!",
+  "author": "Sayantan Roy",
+  "license": "GPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dusk196/tron-js"
+  },
+  "bugs": {
+    "url": "https://github.com/dusk196/tron-js/issues"
+  },
+  "homepage": "https://github.com/dusk196/tron-js#readme",
+  "type": "module",
+  "dependencies": {},
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.2",
+    "vite": "^7.1.5"
+  }
+}
